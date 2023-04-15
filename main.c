@@ -22,7 +22,7 @@ int main() {
         {
             int index = CHANNEL_NUM * (width * i + j);
             double value = 0;
-            for (int k = 0; k < CHANNEL_NUM; k++) value += (int) rgb_image[index+k];
+            for (int k = 0; k < CHANNEL_NUM; k++) value += rgb_image[index+k];
             value /= 3;
             rgb_image[index] = (uint8_t) value;
             rgb_image[index+1] = (uint8_t) value;

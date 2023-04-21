@@ -2,25 +2,25 @@
 #include <stdlib.h>
 #include <time.h>
 
-#include "helpers.h"
-
 #define STB_IMAGE_IMPLEMENTATION
 #include "stb_image.h"
 
 #define STB_IMAGE_WRITE_IMPLEMENTATION
 #include "stb_image_write.h"
 
+#include "helpers.h"
+
 // Random number generator
+// https://stackoverflow.com/questions/1190870/i-need-to-generate-random-numbers-in-c
 void seed_random_number_generator()
 {
-    // https://stackoverflow.com/questions/1190870/i-need-to-generate-random-numbers-in-c
     srand(time(0));
 }
 
 // Get random integer in range
+// https://stackoverflow.com/questions/1190870/i-need-to-generate-random-numbers-in-c
 int get_random_int(int min, int max)
 {
-    // https://stackoverflow.com/questions/1190870/i-need-to-generate-random-numbers-in-c
     return rand() % (max - min) + min;
 }
 
@@ -66,6 +66,7 @@ void load_rgb_image(RGBImage* rgbImage, char* filename)
     }
 }
 
+// Write an RGBImage using stb
 void write_rgb_image(RGBImage* rgbImage, char* filename)
 {
     // Convert the 2d array into a 1d array

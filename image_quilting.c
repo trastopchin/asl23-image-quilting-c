@@ -1,5 +1,3 @@
-#include <stdlib.h>
-
 #include "image_quilting.h"
 #include "helpers.h"
 
@@ -20,9 +18,11 @@ void quilt_random_blocks(RGBImage* input, RGBImage* output, int blockSizeX, int 
             int x = blockSizeX * blockX;
             int y = CHANNEL_NUM * blockSizeY * blockY;
 
-            // Randomly choose a new block and place it
+            // Randomly choose a new block
             int offsetX = get_random_int(0, input->cols - blockSizeX);
             int offsetY = get_random_int(0, input->rows - blockSizeY);
+
+            // Write the randomly chosen block to the output
             for (int i = 0; i < blockSizeX; i++){
                 for (int j = 0; j < blockSizeY; j++){
                     for (int k = 0; k < CHANNEL_NUM; k++){

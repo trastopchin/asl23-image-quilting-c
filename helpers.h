@@ -25,4 +25,3 @@ void free_rgb_image(RGBImage* rgbImage);
 void load_rgb_image(RGBImage* rgbImage, char* filename);
 // Write an RGBImage using stb
 void write_rgb_image(RGBImage* rgbImage, char* filename);
-

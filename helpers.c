@@ -17,7 +17,7 @@ void seed_random_number_generator()
     srand(time(0));
 }
 
-// Random integer
+// Get random integer in range
 int get_random_int(int min, int max)
 {
     // https://stackoverflow.com/questions/1190870/i-need-to-generate-random-numbers-in-c

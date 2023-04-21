@@ -3,4 +3,4 @@ project(asl23_image_quilting C)
 
 set(CMAKE_C_STANDARD 11)
 
-add_executable(asl23_image_quilting main.c)
+add_executable(asl23_image_quilting main.c helpers.h helpers.c image_quilting.c image_quilting.h)
